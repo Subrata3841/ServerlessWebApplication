@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-header">Student Registration Form</h2>
+        <form>
+            <div class="mb-1">
+                <label for="firstName" class="form-label">Student Name</label>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="middleName" placeholder="Middle Name">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+            <div class="mb-1">
+                <label for="studentId" class="form-label">Student ID</label>
+                <input type="text" class="form-control" id="studentId">
+            </div>
+            <div class="mb-1">
+                <label for="email" class="form-label">Student Email</label>
+                <input type="email" class="form-control" id="email" placeholder="ex: myname@gmail.com">
+            </div>
+            <div class="mb-1">
+                <label for="gender" class="form-label">Gender</label>
+                <select class="form-select" id="gender">
+                    <option selected>Please Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="courseList" class="form-label">List of Course</label>
+                <select class="form-select" id="courseList">
+                    <option selected>Please Select</option>
+                    <option >B.Tech</option>
+                    <option >M.Tech</option>
+                    <option >BBA</option>
+                    <option >MBA</option>
+                </select>
+            </div>
+            <br>
+                <input type="submit" id="savestudent" class="btn-submit" value="Submit Data">
+                <p id="studentSaved"></p>
+            <br>
+            <input type="submit" id="getstudents" value="View all Students">
+            <br><br>
+            <div id="showStudents">
+                <table id="studentTable">
+                    <colgroup>
+                        <col style="width:20%">
+                        <col style="width:20%">
+                        <col style="width:20%">
+                        <col style="width:20%">
+                        <col style="width:20%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Student data will be displayed here -->
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
